@@ -16,6 +16,9 @@
 | Unity | 2021.3.0f1 |
 | Asset FTTGR | 1.3 |
 
+## Rule
+- lowerCamelCase
+
 ## Getting Started
 0. Clone this repo
 
