@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove_05th : MonoBehaviour
 {
     public float jumpPower = 200f;
     private bool isJumping = false;
