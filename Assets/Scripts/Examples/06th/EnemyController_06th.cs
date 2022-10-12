@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController_05th : MonoBehaviour
+public class EnemyController_06th : MonoBehaviour
 {
 
     Vector2 position;
