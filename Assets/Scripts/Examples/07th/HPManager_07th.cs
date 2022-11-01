@@ -4,56 +4,53 @@ using UnityEngine;
 
 public class HPManager_07th : MonoBehaviour
 {
-    public GameObject[] LifeArray = new GameObject[3];
-    private int LifeCount;
+    public GameObject[] lifeArray = new GameObject[3];
+    private int lifeCount;
 
     void Start()
     {
-        LifeCount = 3;
+        lifeCount = 3;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            if (LifeCount > 0)
+            if (lifeCount > 0)
             {
-                LifeCount--;
-                Debug.Log(LifeCount);
-
+                lifeCount--;
             }
         }
     }
 
     void Update()
     {
-
-
-        if (LifeCount == 3)
+        if (lifeCount == 3)
         {
-            LifeArray[2].gameObject.SetActive(true);
-            LifeArray[1].gameObject.SetActive(true);
-            LifeArray[0].gameObject.SetActive(true);
+            //SetActiveÇ≈âÊëúÇÃï\é¶ÅEîÒï\é¶ÇêÿÇËë÷Ç¶
+            lifeArray[2].gameObject.SetActive(true);
+            lifeArray[1].gameObject.SetActive(true);
+            lifeArray[0].gameObject.SetActive(true);
         }
 
-        if (LifeCount == 2)
+        if (lifeCount == 2)
         {
-            LifeArray[2].gameObject.SetActive(false);
-            LifeArray[1].gameObject.SetActive(true);
-            LifeArray[0].gameObject.SetActive(true);
+            lifeArray[2].gameObject.SetActive(false);
+            lifeArray[1].gameObject.SetActive(true);
+            lifeArray[0].gameObject.SetActive(true);
         }
-        if (LifeCount == 1)
+        if (lifeCount == 1)
         {
-            LifeArray[2].gameObject.SetActive(false);
-            LifeArray[1].gameObject.SetActive(false);
-            LifeArray[0].gameObject.SetActive(true);
+            lifeArray[2].gameObject.SetActive(false);
+            lifeArray[1].gameObject.SetActive(false);
+            lifeArray[0].gameObject.SetActive(true);
         }
 
-        if (LifeCount <= 0)
+        if (lifeCount <= 0)
         {
-            LifeArray[2].gameObject.SetActive(false);
-            LifeArray[1].gameObject.SetActive(false);
-            LifeArray[0].gameObject.SetActive(false);
+            lifeArray[2].gameObject.SetActive(false);
+            lifeArray[1].gameObject.SetActive(false);
+            lifeArray[0].gameObject.SetActive(false);
         }
     }
 }

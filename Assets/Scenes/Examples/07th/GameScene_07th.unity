@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9518661000febf2479b8fca72d9541c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeArray:
+  lifeArray:
   - {fileID: 1963326328}
   - {fileID: 1694299187}
   - {fileID: 314308179}
