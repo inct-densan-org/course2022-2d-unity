@@ -5,12 +5,12 @@ using UnityEngine;
 public class ScoreManager_07th : MonoBehaviour
 {
     public int itemCount = 0;
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Item"))
+        if (other.gameObject.CompareTag("Item"))
         {
             itemCount++;
-            collision.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
         }
     }
 }
